@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Cidade } from './components/cidade/cidade';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    Cidade
   ],
   imports: [
     BrowserModule,

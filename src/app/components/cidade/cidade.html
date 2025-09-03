@@ -1,1 +1,40 @@
-<p>cidade works!</p>
+<div class="container">
+    <div class="row">
+        <div class="co">
+            <div class="display-4 text-center">Cadastro de Cidades</div>
+            <form [formGroup]="formGroupCidades">
+                <div class="mb-3">
+                    <label for="inputId" class="form-label">Id</label>
+                    <input formControlName="id" type="number" class="form-control" id="inputId">
+                </div>
+                <div class="mb-3">
+                    <label for="inputNome" class="form-label">Nome</label>
+                    <input formControlName="nome" type="text" class="form-control" id="inputNome">
+                </div>
+                <div class="mb-3">
+                    <label for="inputEstado" class="form-label">Estado</label>
+                    <input formControlName="estado" type="text" class="form-control" id="inputEstado">
+                </div>
+                <div class="mb-3">
+                    <label for="inputPopulacao" class="form-label">População</label>
+                    <input formControlName="populacao" type="number" class="form-control" id="inputPopulacao">
+                </div>
+                <div class="mb-3">
+                    <label for="inputArea" class="form-label">Área (km²)</label>
+                    <input formControlName="areaKm2" type="number" class="form-control" id="inputArea">
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="save()">Salvar</button>
+            </form>
+            <div class="display-6 text-center">Cidades Cadastradas</div>
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group-item" *ngFor="let p of cidades">
+                    <li class="list-group-item">{{p.id}}</li>
+                    <li class="list-group-item">{{p.nome}}</li>
+                    <li class="list-group-item">{{p.estado}}</li>
+                    <li class="list-group-item">{{p.populacao}}</li>
+                    <li class="list-group-item">{{p.areaKm2}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

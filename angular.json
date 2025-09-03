@@ -32,7 +32,11 @@
               }
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
+            ],
+            "polyfills": [
+              "@angular/localize/init"
             ]
           },
           "configurations": {
@@ -86,10 +90,16 @@
             ],
             "styles": [
               "src/styles.css"
+            ],
+            "polyfills": [
+              "@angular/localize/init"
             ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "fa611704-d8e7-4cb9-9893-eedde23987ea"
   }
 }
